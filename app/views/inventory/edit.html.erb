@@ -1,0 +1,24 @@
+<h2>Edit an Existing Widget</h2>
+
+<p>Edit attributes for a Widget using this form.</p>
+
+<%= form_tag(update_inventory_path(:id => @widget.id), method: :put) do %>
+	<p>Name:<br/>
+	<%= text_field :widget, :name %>
+	</p>
+
+	<p>Description:<br/>
+	<%= text_area :widget, :description %>
+	</p>
+
+	<p>Color:<br/>
+	<%= text_field :widget, :color %>
+	</p>
+
+	<p>Size:<br/>
+	<%= text_field :widget, :size %>
+	</p>
+
+	<p><%= submit_tag 'Update' %></p>
+
+<% end %>

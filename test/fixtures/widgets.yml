@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: Deck Chair
+  description: A folding deck chair
+  color: red
+  size: 2
+
+two:
+  name: Lamp
+  description: A tabletop lamp
+  color: white
+  size: 1

@@ -1,0 +1,6 @@
+<p>All Widgets:</p>
+<% @widgets.each do |widget| %>
+	<h2>Name: <%= widget.name %></h2>
+	<p>Description: <%= widget.description %></p>
+	<%= link_to("Edit", edit_inventory_path(widget.id)) %> <%= link_to("Delete", delete_inventory_path(widget.id), { :method => :delete } ) %>
+<% end %>

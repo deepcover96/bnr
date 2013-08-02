@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Widget Manager Application</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<p style="color: green"><%= flash[:notice] %></p>
+	<h1>The Widget Manager</h1>
+	<p><%= link_to 'Inventory', widgets_path %> |
+		<%= link_to 'Boxes', boxes_path %> |
+		<%= link_to 'Orders', orders_path %> |
+		<%= link_to 'About Us', :controller => 'about', 
+								:action => 'company' %> |
+		<%= link_to 'Contact', 	:controller => 'about', 
+							  	:action => 'contact' %>
+	</p>
+
+<%= yield %>
+
+</body>
+</html>

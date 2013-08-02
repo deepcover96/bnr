@@ -1,0 +1,8 @@
+<h1>All About the Big Nerd Company</h1>
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<p>We're a great company.  We've been producing great Widgets since <%= @year %>.</p>
+
+<p>Your user agent: <%= @user_agent %></p>

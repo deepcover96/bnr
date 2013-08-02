@@ -1,0 +1,7 @@
+<h1>The Supervisors of Widgets</h1>
+
+<% @managers.each do |manager| %>
+	<%= render 'person', :person => manager %>
+<% end %>
+
+<p>That's all of the managers!</p>
