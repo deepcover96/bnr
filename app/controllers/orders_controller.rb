@@ -103,7 +103,6 @@ class OrdersController < ApplicationController
 
   def remove_box
     @order = Order.find(params[:id])
-    logger.debug ">>>>>>>>>>>>>>> Order ID is #{@order.id}"
     @box = Box.find(params[:box_id])
 
     @order.boxes.delete(@box)

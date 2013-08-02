@@ -2,11 +2,14 @@ class WidgetsController < ApplicationController
   # GET /widgets
   # GET /widgets.json
   def index
-    @widgets = Widget.all
+    @widgets = Widget.includes(:box).all
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @widgets }
+      format.xml { render :xml => @widgets }
+      format.rss { render :layout => false }
+      format.atom  # index.atom.builder
     end
   end
 
@@ -22,7 +25,6 @@ class WidgetsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @widget }
-      format.xml { render xml: @widget }
     end
   end
 

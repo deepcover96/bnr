@@ -9,4 +9,8 @@ class BrowsingTest < ActionDispatch::PerformanceTest
   def test_homepage
     get '/'
   end
+
+  def test_orders
+  	get '/orders/'
+  end
 end
